@@ -6,15 +6,15 @@ export default defineConfig({
     build: {
         outDir: "../dist",
         lib: {
-            name: "<%= name %>",
-            entry: "<%= name %>.js",
-            fileName: "<%= name %>",
+            name: "ilw-accordion-controller",
+            entry: "ilw-accordion-controller.js",
+            fileName: "ilw-accordion-controller",
             formats: ["es", "cjs", "umd"],
         },
         rollupOptions: {
             output: {
                 assetFileNames: (chunkInfo) => {
-                    if (chunkInfo.name === "style.css") return "<%= name %>.css";
+                    if (chunkInfo.name === "style.css") return "ilw-accordion-controller.css";
                 },
             },
         },
